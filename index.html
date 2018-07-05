@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-</head>
-<body>
+    <meta charset="UTF-8" name="viewport" content="user-scalable=0" />
+    <title>17赢.一起赢</title>
 
+        <script type="text/javascript">
+
+
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        if(isAndroid){
+            $(".bank-xieyi p").css("font-size","13px")
+        }
+        if(isiOS){
+            $(".bank-xieyi p").css("font-size","35px")
+        }
+    </script>
+</head>
+<style type="text/css">
+    body {
+        text-align: center
+    }
+    .guanzhu{
+        margin-top: 100px;
+
+    }
+    .action{
+        margin-top: 50px;
+    }
+    .back{
+        margin-top: 150px;
+        background-color: #0ABB07;
+        margin-left: 150px;
+        margin-right: 150px;
+        height: 100px;
+        text-align: center;
+        line-height:100px;
+        border-radius: 10px;
+    }
+    .testImage{
+        width: 250px; height:250px;
+
+    }
+    .Image_text{
+        position:absolute;top:35px;height:30px;line-height:30px;
+    }
+</style>
+<body>
+<div>
+    <div class="guanzhu">
+        <img class="testImage"  src="image/guanzhu.png">
+
+    </div>
+    <div class="action">
+        <h3 style="font-size:44px;">请先关注公众号</h3>
+        <span style="font-size: 32px">本功能需要关注 17赢公众号 才能使用</span>
+
+    </div>
+    <div class="back">
+        <span style="font-size: 34px;color: white" onclick="back_tag()">返回关注公众号</span>
+    </div>
+
+</div>
+<script>
+    function back_tag () {
+        alert("----back-------")
+    }
+</script>
 </body>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-window.location.href = "https://mkt.360jie.com.cn/activity/ch/17yingditui/17yingditui01";
-document.write(unescape("%3Cspan id='cnzz_stat_icon_1273395913'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1273395913%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 </html>
