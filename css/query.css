@@ -1,0 +1,260 @@
+* {
+    font-size:10px;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing:border-box;
+    color:#333;
+}
+html {
+    font-size:20px;
+}
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,p {
+    margin:0;
+}
+ul {
+    list-style:none;
+    padding:0;
+}
+body {
+    /*background:#f5f5f5;*/
+    width:100vw;
+    height:100vh;
+    background:#fff 100% 100%  no-repeat;
+    background-attachment:fixed;
+    background-position:bottom;
+}
+img {
+    width:100%;
+    height:100%;
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:none;
+}
+#head-div{
+    margin-top:32px;
+    margin-left: 5%;
+    width: 90%;
+    /*border-bottom:3px solid #eeeeee;*/
+    padding-bottom:60px;
+
+}
+#head-div h3{
+    font-size: 2.2rem;
+    line-height: 2rem;
+}
+#head-div label {
+    color: #1caaf0;
+    font-size: 1rem;
+    line-height: 3rem;
+}
+
+
+
+.clearBoth:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+/*****************/
+.nav-header{
+    width: 100%;
+    height:4.4rem;
+    position:relative;
+    /*border-bottom:3px solid #eeeeee;*/
+    background: #999;
+}
+.nav-header img {
+    position:absolute;
+    left:1.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width:2rem;
+    height:2rem;
+    background: #fe0003;
+}
+.nav-header h1{
+    text-align:center;
+    font-size:1.4rem;
+    line-height:4.4rem;
+}
+
+.recommend-bank {
+    background:#fff;
+}
+.recommend-bank ul{
+    width: 90%;
+    margin:auto;
+}
+.backbody{
+    background-color: #fff;
+}
+
+.vcode-view{
+    font-size:0;
+    width: 100%;
+margin-top: 10px;
+    /*border-bottom:1px solid #eeeeee;*/
+}
+.vcode-view label{
+    font-size:1.4rem;
+    line-height:2rem;
+    width:30%;
+    display: inline-block;
+}
+.vcode-view input{
+    font-size:1.4rem;
+    border: 1px solid;
+    /*border-top-color:#333;*/
+    /*border-left-color:#fff;*/
+    outline: none;
+    display:inline-block;
+    background-color: transparent;
+    width:34%;
+    height:3rem;
+    line-height: 2rem;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+
+}
+
+.vcode-view a {
+    font-size: 4rem;
+    color: #007AFF;
+}
+.recommend-bank h5 {
+    margin-left: 5%;
+    width: 90%;
+    height: 5px;
+    /*border-bottom:3px solid #eeeeee;*/
+}
+.bank-describe label{
+    font-size:1.4rem;
+    width:30%;
+    height:2.2rem;
+    line-height:2.2rem;
+    display:inline-block;
+}
+.bank-describe input{
+    font-size:1.4rem;
+    line-height: 2.2rem;
+    border: 1px solid #333;
+    /*outline: none;*/
+    display:inline-block;
+    background-color: transparent;
+    width:65%;
+    height:3rem;
+
+}
+.recommend-bank ul li {
+    float:left;
+    width:50%;
+
+    /*border-bottom:3px solid #eeeeee;*/
+    padding:5rem 0;
+}
+.recommend-bank ul li:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+.bank-icon {
+    width:30%;
+    float:left;
+    padding-left:2rem;
+}
+.bank-describe {
+    font-size:0;
+    width: 100%;
+    margin-top: 10px;
+    /*border-bottom:3px solid #eeeeee;*/
+}
+.bank-describe a {
+    font-size: 4rem;
+    color: #007AFF;
+}
+.color-red {
+    color:#fe0003;
+}
+.bank-describe h6 {
+    font-size:3.5rem;
+    margin:1.5rem 0;
+}
+.bank-describe font {
+    display:block;
+    font-size:3rem;
+    margin-bottom:2rem;
+    color:#adadaf;
+}
+.bank-describe p {
+    font-size:3.5rem;
+
+}
+.bank-describe p span {
+    font-size:3.5rem;
+    margin-left:3rem;
+}
+.bank-button {
+    width: 90%;
+    margin-left: 5%;
+    margin-top:2rem;
+    height:4.8rem;
+    border-radius: 1rem;
+    text-align:center;
+    /*display:block;*/
+    font-size:2rem;
+    background: #b2e6ff;
+    /*border:none;*/
+    line-height:4.8rem;
+    text-align:center;
+    color:#fff;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+    /*width: 90%;*/
+
+    /*margin-left: 5%;*/
+    /*margin-top: 7rem;*/
+    /*height: 12rem;*/
+
+    /*border-radius: 6rem;*/
+    /*text-align: center;*/
+    /*line-height: 12rem;*/
+}
+
+
+.p1{
+    background: #b2e6ff;
+}
+.p{
+    background:linear-gradient(-270deg,#247eff,#58beff);
+}
+.bank-xieyi {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3rem;
+    text-align:center;
+    line-height: 5rem;
+}
+.bank-xieyi label{
+    font-size:1.4rem;
+    color: #1caaf0;
+
+}
+.bank-xieyi a{
+    font-size:1.4rem;
+    color: #1caaf0;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+
+}
+.classfooter{
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 25rem;
+    width:100%;
+    background-color: transparent;
+}
+#cnzz_stat_icon_1273395913{
+    display: none;
+}

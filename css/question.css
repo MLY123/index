@@ -1,0 +1,93 @@
+html {
+    font-size:20px;
+}
+#head-div{
+    margin-left: 5%;
+    width: 90%;
+    /*text-align: center;*/
+    padding-top: 50px;
+    padding-bottom:50px;
+    border-bottom: 10px solid #eeeeee;
+
+}
+#head-div h3{
+    font-size: 1.8rem;
+    line-height: 0rem;
+}
+#head-div label {
+    color: #333;
+    font-size: 1rem;
+
+}
+.nav-header{
+    width: 95%;
+    margin-left: 2.5%;
+    height:4.4rem;
+    position:relative;
+    border-bottom:3px solid #eeeeee;
+    /*background: #333;*/
+}
+.nav-header img {
+    position:absolute;
+    left:1.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width:2rem;
+    height:2rem;
+    background: #fe0003;
+}
+.nav-header h1{
+    text-align:center;
+    font-size:1.4rem;
+    line-height:4.4rem;
+}
+.select{
+    margin-left: 5%;
+    width: 90%;
+}
+.select .question p{
+    font-size: 1.4rem;
+}
+.select .repay{
+    margin-left: 5%;
+    width: 90%;
+}
+.select .last-repay{
+    border-bottom: 5px solid #eeeeee;
+}
+
+.select  a b {
+    display:none;
+}
+.select .active b {
+    width:2rem;height:2rem;
+    display:block;
+}
+.select span{
+    display: inline-block;
+    width: 6rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    /* color: #fe0003; */
+    height: 2rem;
+
+}
+.summit-div {
+    position: absolute;
+    width: 90%;
+    height: 4rem;
+    bottom: 2%;
+    left: 5%;
+    right: 5%;
+    background-color: #247eff;
+    text-align: center;
+    border-radius: 1rem;
+}
+.summit-div span{
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #fff;
+}
