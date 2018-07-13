@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="./js/jquery-2.1.4.min.js"></script>
-    <script src="./js/load.min.js"></script>
+    <script src="./js/testConfig.js"></script>
 
     <title>申请人行报告</title>
 </head>
@@ -30,11 +30,11 @@
 
             <div class="bank-describe">
                 <label for="Rname">账号</label>
-                <input style="border: 1px solid" class="enter-inf" type="text" placeholder="填写账号" name="u_Name" id="u_Name">
+                <input style="border: 1px solid" class="enter-inf" type="text" placeholder="填写账号" name="u_LoginName" id="u_LoginName">
             </div>
             <div style=" margin-top: 10px">
                 <label style="width: 30%" for="CardId">密码</label>
-                <input style="border: 1px solid" class="enter-inf" maxlength = 18 type="text" placeholder="填写密码" name="u_CardId" id="u_CardId">
+                <input style="border: 1px solid" class="enter-inf" maxlength = 18 type="text" placeholder="填写密码" name="u_PassWord" id="u_PassWord">
             </div>
             <!--<div class="bank-describe">-->
             <!--<label for="Iphone">手机号</label>-->
@@ -81,112 +81,98 @@
             }, duration);
         }
         $("#btn").on("click",function(){
-            alert("22222")
-            var regPhone = /^1[3-9][0-9][\s\S]*$/;
-            var u_Iphone = document.getElementById("u_Iphone").value;
-
-            if (u_Iphone.length <= 0) {
-
-                Toast("手机号不能为空！", 2000);
-                return false;
-            }
-            if (u_Iphone.length != 11) {
-                Toast("请输入正确的手机号码！", 2000);
-                return false;
-            }
-            if (u_Iphone.length == 11) {
-                if (!regPhone.test(u_Iphone)) {
-                    Toast("请输入正确的手机号码！", 2000);
-                    return false;
-                }
-
-            }
-
+//            alert("22222")
+//            var regPhone = /^1[3-9][0-9][\s\S]*$/;
+//            var u_Iphone = document.getElementById("u_Iphone").value;
+//
+//            if (u_Iphone.length <= 0) {
+//
+//                Toast("手机号不能为空！", 2000);
+//                return false;
+//            }
+//            if (u_Iphone.length != 11) {
+//                Toast("请输入正确的手机号码！", 2000);
+//                return false;
+//            }
+//            if (u_Iphone.length == 11) {
+//                if (!regPhone.test(u_Iphone)) {
+//                    Toast("请输入正确的手机号码！", 2000);
+//                    return false;
+//                }
+//
+//            }
+            var u_LoginName = document.getElementById("u_LoginName").value;
+            var u_PassWord = document.getElementById("u_PassWord").value;
             $.ajax({
                 type: "POST",
-                url: "http://apidev.thinkinfo.tech/record/mobile_code",
-                data: {mobile: u_Iphone},
-                dataType: "json",
+                url: _testIpcrsUrl_,
+                data: {loginname: u_LoginName,password:u_PassWord,method:"login"},
+                dataType: "jsonp",
                 timeout: 15000,
+                jsonpCallback:"callback",
 
-                beforeSend: function () {
-                    $("#indexTotal").hide();
-                    $(".qunIn").css("display", "none");
-                    $("#admin-detail").css("display", "none");
-                    $("#showMes").show();
-                },
-                complete: function () {
-                    $("#indexTotal").show();
-                    $("#showMes").hide();
-
-                },
                 success: function (data) {
-                    if (data.status == 200) {
-                        var testData =  JSON.stringify(data)
-                        window.sessionStorage.setItem('product', testData);
-
-                        window.location.href = "../test.html"
-//                        Toast('验证码获取成功', 2000);
-                    } else {
-                        Toast(data.msg, 2000);
-                    }
-
+                    alert(JSON.stringify(data))
+                    console.log(JSON.stringify(data))
+//                    if(data !== null){
+//                        window.location.href = "findpassword2.html"
+//                    }
 
                 }
             })
         })
 
     </script>
-    <script>
+    <!--<script>-->
 
-        var enterInf = $(".enter-inf");
-        var flag=false;
-        for(var i=0;i<enterInf.length;i++) {
-            enterInf.eq(i).bind("input propertychange change",function(event){
-                if(enterInf.eq(0).val() == '' || enterInf.eq(1).val() == '' || enterInf.eq(2).val() == '' || enterInf.eq(3).val() == '' ) {
-                    $(".submit").removeClass("p");
-                    $(".submit").addClass("p1");
-                    flag=false;
+        <!--var enterInf = $(".enter-inf");-->
+        <!--var flag=false;-->
+        <!--for(var i=0;i<enterInf.length;i++) {-->
+            <!--enterInf.eq(i).bind("input propertychange change",function(event){-->
+                <!--if(enterInf.eq(0).val() == '' || enterInf.eq(1).val() == '' || enterInf.eq(2).val() == '' || enterInf.eq(3).val() == '' ) {-->
+                    <!--$(".submit").removeClass("p");-->
+                    <!--$(".submit").addClass("p1");-->
+                    <!--flag=false;-->
 
-                } else {
-
-
-                    flag=true;
-                    $(".submit").removeClass("p1");
-                    $(".submit").addClass("p");
-
-                }
-            });
-        }
+                <!--} else {-->
 
 
-        var arrinput = $("#verifiedCode input");
-        var l = $("#verifiedCode input").length;
-        $("#verifiedCode input").bind('input propertychange keydown',function (e) {
-            var vercode = '';
-            var keycode = e.which;
-            if($(this).val() != '') {
-                $(this).next().focus();
-            } else if(keycode == 8) {
-                $(this).prev().focus();
-            }
-            for(var i=0;i<l;i++) {
-                vercode += $("#verifiedCode input").eq(i).val();
-            }
-            console.log(vercode);
-        });
+                    <!--flag=true;-->
+                    <!--$(".submit").removeClass("p1");-->
+                    <!--$(".submit").addClass("p");-->
 
-        $(".select a").on('click',function () {
-            $(".active").removeClass("active");
-            $(this).addClass("active");
-        })
+                <!--}-->
+            <!--});-->
+        <!--}-->
 
 
+        <!--var arrinput = $("#verifiedCode input");-->
+        <!--var l = $("#verifiedCode input").length;-->
+        <!--$("#verifiedCode input").bind('input propertychange keydown',function (e) {-->
+            <!--var vercode = '';-->
+            <!--var keycode = e.which;-->
+            <!--if($(this).val() != '') {-->
+                <!--$(this).next().focus();-->
+            <!--} else if(keycode == 8) {-->
+                <!--$(this).prev().focus();-->
+            <!--}-->
+            <!--for(var i=0;i<l;i++) {-->
+                <!--vercode += $("#verifiedCode input").eq(i).val();-->
+            <!--}-->
+            <!--console.log(vercode);-->
+        <!--});-->
+
+        <!--$(".select a").on('click',function () {-->
+            <!--$(".active").removeClass("active");-->
+            <!--$(this).addClass("active");-->
+        <!--})-->
 
 
 
 
-    </script>
+
+
+    <!--</script>-->
     <div style=" width: 70%;
     margin-left: 15%;
     margin-top: 1rem;
